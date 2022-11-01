@@ -1,6 +1,6 @@
-package iextrader;
+package employee;
 
-import iextrader.model.Client;
+import employee.model.Client;
 import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
@@ -17,16 +17,17 @@ public class WhenRegisteringANewClient {
 
     @Before
     public void setBaseURL() {
-        RestAssured.baseURI = "http://localhost:8080/api";
+        RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1/create";
     }
 
     @Test
     public void each_new_client_should_be_given_a_unique_id() {
 
         Client newClient = Client.Builder.aClient()
-                .withFirstName("Sarah-Jane")
-                .withLastName("Smith")
-                .withEmail("sarah-jane@smith.com")
+                .withemployee_name("Sarah-Jane SMith")
+                .withemployee_salary("1200000")
+                .withemployee_age("19")
+                .withprofile_image("")
                 .build();
 
         given().contentType("application/json")
@@ -40,8 +41,9 @@ public class WhenRegisteringANewClient {
         given().pathParam("id", clientId)
                 .when().get("/client/{id}")
                 .then().statusCode(200)
-                .and().body("email",equalTo("sarah-jane@smith.com"))
-                .and().body("firstName",equalTo("Sarah-Jane"))
-                .and().body("lastName",equalTo("Smith"));
+                .and().body("employee_name",equalTo("Sarah-Jane Smith"))
+                .and().body("employee_salary",equalTo("1200000"))
+                .and().body("employee_age",equalTo("19"))
+                .and().body("profile_image",equalTo(""));
     }
 }
