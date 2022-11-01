@@ -1,3 +1,2 @@
-IEX Trading
-
-The IEX Trading API provides access to real time share market data.
+Employee API
+The Employee API provides access to real time data of the employees and allow to create and delete them
