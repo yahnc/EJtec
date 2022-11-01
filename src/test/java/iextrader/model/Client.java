@@ -1,40 +1,45 @@
-package iextrader.model;
+package employee.model;
 
 public class Client {
     String id;
-    String email;
-    String firstName;
-    String lastName;
+    String employee_name;
+    String employee_salary;
+    String employee_age;
+    String profile_image;
 
-    public Client(String id, String email, String firstName, String lastName) {
+    public Client(String id, String employee_name, String employee_salary, String employee_age, String profile_image) {
         this.id = id;
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.employee_name = employee_name;
+        this.employee_salary = employee_salary;
+        this.employee_age = employee_age;
+        this.profile_image = profile_image;
     }
 
     public String getId() {
         return id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getemployee_name() {
+        return employee_name;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getemployee_salary() {
+        return employee_salary;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getemployee_age() {
+        return employee_age;
     }
-
+    public String getprofile_image() {
+        return profile_image;
+    }
 
     public static final class Builder {
         String id;
-        String email;
-        String firstName;
-        String lastName;
+        String employee_name;
+        String employee_salary;
+        String employee_age;
+        String profile_image;
 
         private Builder() {
         }
@@ -48,23 +53,28 @@ public class Client {
             return this;
         }
 
-        public Builder withEmail(String email) {
-            this.email = email;
+        public Builder withemployee_name(String employee_name) {
+            this.employee_name = employee_name;
             return this;
         }
 
-        public Builder withFirstName(String firstName) {
-            this.firstName = firstName;
+        public Builder withemployee_salary(String employee_salary {
+            this.employee_salary = employee_salary;
             return this;
         }
 
-        public Builder withLastName(String lastName) {
-            this.lastName = lastName;
+        public Builder withemployee_age(String employee_age) {
+            this.employee_age = employee_age;
+            return this;
+        }
+
+        public Builder withprofile_image(String profile_image) {
+            this.profile_image = profile_image;
             return this;
         }
 
         public Client build() {
-            return new Client(id, email, firstName, lastName);
+            return new Client(id, employee_name, employee_salary, employee_age, profile_image);
         }
     }
 }
