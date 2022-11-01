@@ -8,7 +8,7 @@ import static net.serenitybdd.rest.SerenityRest.then;
 import static net.serenitybdd.rest.SerenityRest.when;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EmployeeAPIStepDefintions {
+public class EmployeeStepDefintions {
 
 
     @When("I request all the information of the employees")
