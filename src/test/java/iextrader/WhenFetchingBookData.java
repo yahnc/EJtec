@@ -1,6 +1,6 @@
-package iextrader;
+package employee;
 
-import iextrader.model.Trade;
+import employee;
 import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
@@ -15,11 +15,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.*;
 
 @RunWith(SerenityRunner.class)
-public class WhenFetchingBookData {
+public class WhenConsultar_empleado {
 
     @Before
     public void setBaseURLs() {
-        RestAssured.baseURI = "https://api.iextrading.com/1.0";
+        RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1/employees";
     }
 
     @Test
