@@ -1,8 +1,8 @@
-Feature: Consultar Empleados
+Feature: Consultar Empleado Nuevo
 
-  Information about the current and historical employees.
+  Information about the new employee.
 
-  Scenario: View the employees
+  Scenario: View the new employee
 
   Observe the employee ID, Salary, Age, Name and profile picture
 
