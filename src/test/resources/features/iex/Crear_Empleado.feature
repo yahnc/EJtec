@@ -1,11 +1,11 @@
-Feature: Consultar Empleados
+Feature: Crear Empleados
 
-  Information about the current and historical employees.
+  create all the information about the employee.
 
-  Scenario: View the employees
+  Scenario: Create the employee
 
-  Observe the employee ID, Salary, Age, Name and profile picture
+  Insert the employee ID, Salary, Age, Name and profile picture
 
     Given I am an admin
-    When I request all the information of the employees
-    Then I should see all the information requested
+    When I create and register all the information of the employee
+    Then The employee should be created
