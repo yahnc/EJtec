@@ -58,7 +58,7 @@ public class Client {
             return this;
         }
 
-        public Builder withemployee_salary(String employee_salary {
+        public Builder withemployee_salary(String employee_salary) {
             this.employee_salary = employee_salary;
             return this;
         }
