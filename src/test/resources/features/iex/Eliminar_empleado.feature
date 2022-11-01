@@ -1,11 +1,11 @@
-Feature: Consultar Empleados
+Feature: Eliminar Empleados
 
-  Information about the current and historical employees.
+  Delete all the information about the current employee.
 
-  Scenario: View the employees
+  Scenario: Delete the employee
 
-  Observe the employee ID, Salary, Age, Name and profile picture
+  Delete the employee ID, Salary, Age, Name and profile picture
 
     Given I am an admin
-    When I request all the information of the employees
-    Then I should see all the information requested
+    When I Delete all the information of the employee
+    Then I should see all the information deleted
