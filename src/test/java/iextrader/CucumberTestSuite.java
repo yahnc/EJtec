@@ -1,4 +1,4 @@
-package iextrader;
+package employee;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
